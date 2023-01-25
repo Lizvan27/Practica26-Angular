@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home/home.component';
+import { ComponentsModule } from '../components/components.module';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { PagesModule } from './pages/pages.module';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,23 +18,24 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { NaveComponent } from './nave/nave.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NaveComponent
+    HomeComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    PagesModule,
-    BrowserAnimationsModule,
-    LayoutModule,
+    CommonModule,
+    ComponentsModule,
+    RouterLink,
+    RouterLinkActive,
+
     MatToolbarModule,
-    MatButtonModule,
     MatSidenavModule,
+    MatButtonModule,
     MatIconModule,
     MatListModule,
     MatGridListModule,
@@ -46,11 +45,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule,
-
-    HttpClientModule
+    MatPaginatorModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports:[
+    HomeComponent
+    ]
 })
-export class AppModule { }
+export class PagesModule { }

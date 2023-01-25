@@ -1,0 +1,17 @@
+
+<h2>Principales Datos</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Usuario</th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor="let i of mostrar">
+            <th>{{i.name}}</th>
+            <th>{{i.username}}</th>
+          </tr>  
+    </tbody>
+</table>

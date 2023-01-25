@@ -1,0 +1,19 @@
+<div class="conteiner">
+    <div>
+        <h1>Login</h1>
+        <form [formGroup]="formLogin" (ngSubmit)="Ingresar()">
+            <mat-form-field>
+                <mat-label for="usuario">Usuario</mat-label>
+                <input matInput type="text" name="usuario" id="usuario" formControlName="usuario">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="pass">Contraseña</mat-label>
+                <input matInput type="email" name="pass" id="pass" formControlName="pass" placeholder="contraseña es tu correo">
+            </mat-form-field>
+            <div>
+                <button mat-raised-button (click)="Ingresar()">Entrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
